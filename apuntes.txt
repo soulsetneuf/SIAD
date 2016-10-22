@@ -1,0 +1,14 @@
+configurar ulr con helper
+1 configurar archivo aplication/cofig/autoload.php
+  agregar 
+  $autoload['helper'] = array('url');
+2 configurar archivo aplication/cofig/config.php
+  agregar 
+  $config['base_url'] = 'http://localhost/adultomayor/';
+3 configurar .htaccess
+  agregar
+  RewriteEngine on
+  RewriteCond $1 !^(index\.php|robots\.txt|sitemap\.xml|assets)
+  RewriteRule ^(.*)$ index.php/$1 [L]
+
+  Donde assets es el nombre de la carpeta donde se agregar archivos staticos como ser js,css,imagenes
